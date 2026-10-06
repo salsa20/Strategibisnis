@@ -1,4 +1,4 @@
-import streamlit as st
+
 
 st.set_page_config(page_title='Strategi Bisnis Digital', page_icon='💼', layout='wide')
 
@@ -253,6 +253,24 @@ QUIZ=[
 ('Pernyataan paling tepat tentang cloud computing adalah...', ['Cloud selalu lebih murah daripada lokal','Cloud dapat mendukung fleksibilitas dan skalabilitas, tetapi keputusan harus mempertimbangkan biaya, keamanan, regulasi, dan kebutuhan bisnis','Cloud hanya untuk penyimpanan file','Cloud tidak membutuhkan governance'], 'Cloud dapat mendukung fleksibilitas dan skalabilitas, tetapi keputusan harus mempertimbangkan biaya, keamanan, regulasi, dan kebutuhan bisnis','Cloud mendukung fleksibilitas, tetapi bukan berarti selalu paling murah atau bebas risiko.')
 ]
 
+
+
+# ============================================================
+# 10 KASUS DISKUSI KELOMPOK
+# ============================================================
+DISCUSSION_CASES = [
+    {"title":"Kelompok 1 — Toko Retail Tradisional","topic":"Fondasi Strategi Bisnis Digital","case":"Sebuah toko pakaian memiliki omzet yang relatif stabil. Transaksi dilakukan di toko fisik. Pemilik mulai menerima pesanan melalui WhatsApp dan marketplace, tetapi stok masih dicatat manual. Pemilik ingin menggunakan teknologi digital, tetapi belum tahu apakah harus langsung membangun aplikasi sendiri.","questions":["Apakah kondisi toko tersebut sudah dapat disebut digital business?","Mana yang termasuk digitization dan mana yang termasuk digitalization?","Apakah membangun aplikasi sendiri merupakan prioritas strategis?","Bagaimana teknologi digital dapat menciptakan dan menangkap nilai?","Tentukan 3 KPI untuk mengevaluasi strategi."]},
+    {"title":"Kelompok 2 — Marketplace dan Rekomendasi Produk","topic":"Algorithmic Business dan Data-Driven Decision","case":"Sebuah marketplace memiliki jutaan histori transaksi. Manajemen ingin meningkatkan conversion rate dengan menampilkan rekomendasi produk personal. Data yang tersedia meliputi histori pembelian, pencarian, kategori produk, harga, waktu transaksi, dan interaksi pengguna.","questions":["Apa input, proses, dan output dari sistem rekomendasi?","Algoritma apa yang secara konseptual dapat digunakan?","KPI apa yang digunakan untuk mengevaluasi keberhasilan?","Apa risiko jika histori transaksi mengandung bias?","Bagaimana perusahaan memastikan rekomendasi tetap relevan bagi pelanggan?"]},
+    {"title":"Kelompok 3 — Aplikasi Pemesanan Makanan","topic":"Cloud Computing sebagai Infrastruktur Strategis","case":"Sebuah perusahaan kuliner memiliki aplikasi pemesanan. Pada hari biasa terdapat sekitar 5.000 transaksi per hari, tetapi saat promosi jumlah transaksi dapat meningkat berkali-kali lipat. Sistem lama menggunakan server lokal yang kapasitasnya terbatas.","questions":["Mengapa scalability dan elasticity penting pada kasus ini?","Apakah perusahaan harus langsung memindahkan seluruh sistem ke cloud?","Kapan IaaS, PaaS, atau SaaS lebih relevan?","Risiko apa yang harus diperhatikan?","KPI teknologi dan KPI bisnis apa yang perlu dipantau?"]},
+    {"title":"Kelompok 4 — Retail Omnichannel dan Data Terfragmentasi","topic":"Data Engineering dan Business Intelligence","case":"Perusahaan retail memiliki transaksi dari toko fisik, marketplace, website, data pelanggan, dan data promosi. Setiap sumber menggunakan format berbeda. Dashboard penjualan sering menunjukkan angka yang tidak sama dengan laporan keuangan.","questions":["Apa masalah data engineering yang mungkin terjadi?","Buat rancangan data pipeline sederhana dari sumber data sampai dashboard.","Kapan ETL atau ELT dapat dipilih?","Apa saja aspek data quality yang harus diperiksa?","KPI apa yang sebaiknya tersedia untuk manajemen?"]},
+    {"title":"Kelompok 5 — Platform Lokal untuk UMKM","topic":"Platform dan Digital Ecosystem","case":"Sekelompok mahasiswa ingin membuat platform yang menghubungkan UMKM makanan, pelanggan, dan kurir lokal. Masalah awal: sedikit UMKM, sedikit pelanggan, kurir belum tertarik bergabung, pelanggan khawatir kualitas produk, dan platform belum memiliki data yang cukup.","questions":["Siapa saja aktor dalam digital ecosystem?","Apa value proposition untuk masing-masing pihak?","Network effect apa yang mungkin terjadi?","Bagaimana platform memulai ketika pengguna masih sedikit?","Bagaimana governance menjaga kualitas dan kepercayaan?","Dari mana sumber pendapatan platform?"]},
+    {"title":"Kelompok 6 — Kampanye Digital Produk Lokal","topic":"Customer Experience dan Strategi Digital","case":"Sebuah brand makanan lokal menghabiskan anggaran untuk iklan media sosial. Jumlah followers meningkat 40%, tetapi penjualan hanya naik 3%. Impressions, engagement, dan website traffic meningkat, tetapi conversion rate relatif rendah dan sebagian besar pelanggan baru tidak melakukan pembelian ulang.","questions":["Apakah kampanye tersebut dapat disebut berhasil?","Metrik mana yang berpotensi menjadi vanity metric?","Pada tahap customer journey mana masalah kemungkinan terjadi?","Data apa yang perlu diperiksa lebih lanjut?","Strategi apa yang dapat dilakukan untuk meningkatkan conversion dan retention?","Bagaimana mengukur keberhasilan strategi baru?"]},
+    {"title":"Kelompok 7 — Bank Digital dan Onboarding Nasabah","topic":"Digital Transformation dan Customer Experience","case":"Sebuah bank digital mengalami banyak calon nasabah yang berhenti ketika proses pembukaan rekening. Data menunjukkan traffic aplikasi tinggi, tetapi completion rate onboarding rendah. Tim bisnis mengusulkan menambah promosi, sedangkan tim produk menduga proses verifikasi identitas terlalu panjang.","questions":["Apa masalah bisnis utama yang perlu dipastikan terlebih dahulu?","Data apa yang perlu dianalisis untuk memahami titik pelanggan berhenti?","Bagaimana customer journey dapat digunakan untuk menemukan bottleneck?","Apakah menambah promosi merupakan solusi yang tepat? Jelaskan.","Rancang minimal 4 KPI untuk mengevaluasi perbaikan onboarding.","Apa risiko keamanan dan privasi yang harus diperhatikan?"]},
+    {"title":"Kelompok 8 — Smart Warehouse Berbasis IoT","topic":"IoT, Data Engineering, dan Operational Analytics","case":"Perusahaan distribusi sering mengalami kesalahan stok dan keterlambatan pengiriman. Manajemen ingin memasang sensor IoT untuk memantau posisi barang, suhu gudang, dan aktivitas keluar-masuk barang secara real time. Namun biaya investasi dan integrasi dengan sistem lama menjadi perhatian.","questions":["Masalah bisnis apa yang sebenarnya ingin diselesaikan?","Data apa yang perlu dikumpulkan oleh sensor?","Bagaimana alur data dari sensor sampai dashboard operasional?","Apa manfaat dan risiko penggunaan IoT?","Bagaimana membandingkan manfaat bisnis dengan biaya investasi?","Tentukan KPI operasional dan KPI bisnis yang relevan."]},
+    {"title":"Kelompok 9 — Fintech dan Credit Scoring","topic":"Algorithmic Business, Data, dan Risk Management","case":"Sebuah fintech menggunakan data transaksi dan perilaku digital untuk membantu menilai kelayakan kredit. Model mampu mempercepat keputusan, tetapi ditemukan bahwa tingkat persetujuan berbeda cukup besar antar kelompok pelanggan. Manajemen harus menentukan apakah model tetap digunakan, diperbaiki, atau diganti.","questions":["Apa manfaat algorithmic decision-making pada kasus ini?","Data dan variabel apa yang perlu diaudit?","Mengapa bias model dapat menjadi masalah bisnis dan etika?","Bagaimana perusahaan menguji performa dan fairness model?","Apa bentuk governance yang perlu diterapkan?","Buat rekomendasi keputusan dan KPI pemantauannya."]},
+    {"title":"Kelompok 10 — UMKM Go Digital tetapi Profit Tidak Naik","topic":"Strategi Bisnis Digital dan Value Capture","case":"Sebuah UMKM makanan telah masuk marketplace, menggunakan media sosial, menerima pembayaran digital, dan menjalankan iklan online. Penjualan meningkat 20%, tetapi laba hampir tidak berubah karena biaya promosi, komisi platform, diskon, dan biaya operasional juga meningkat.","questions":["Mengapa peningkatan penjualan belum tentu berarti strategi digital berhasil?","Bedakan value creation dan value capture pada kasus tersebut.","Data biaya dan pendapatan apa yang perlu dianalisis?","KPI apa yang sebaiknya digunakan selain omzet?","Alternatif strategi apa yang dapat meningkatkan profitabilitas?","Buat rekomendasi strategi digital yang mempertimbangkan pelanggan dan keberlanjutan bisnis."]},
+]
+
 st.sidebar.title('Strategi Bisnis Digital')
 st.sidebar.caption('Case Method Learning App')
 page=st.sidebar.radio('Navigasi',['Beranda','Materi','Studi Kasus','Latihan','Kuis','Glosarium','Referensi'])
@@ -284,21 +302,36 @@ elif page=='Materi':
     for t,meaning in m['terms']: st.markdown(f'<div class="term"><b>{t}</b><br>{meaning}</div>',unsafe_allow_html=True)
 
 elif page=='Studi Kasus':
-    st.title('Studi Kasus')
-    selected=st.selectbox('Pilih kasus',list(MODULES))
-    m=MODULES[selected]
-    st.markdown(f'## {selected}')
-    st.markdown('<div class="case">'+m['case']+'</div>',unsafe_allow_html=True)
-    st.markdown('## Format Analisis Mahasiswa')
-    st.markdown('''1. **Masalah utama** — apa masalah bisnisnya?
-2. **Data yang dibutuhkan** — bukti apa yang diperlukan?
-3. **Alternatif solusi** — minimal dua.
-4. **Evaluasi** — nilai bisnis, biaya, risiko, organisasi, customer experience, teknologi.
-5. **Rekomendasi** — pilih alternatif terbaik dan alasannya.
-6. **KPI** — bagaimana keberhasilan diukur?
-7. **Risiko & mitigasi** — apa risiko dan cara menguranginya?''')
-    for label,key in [('Masalah utama','problem'),('Data yang dibutuhkan','data'),('Alternatif solusi','alternative'),('Rekomendasi dan alasan','recommendation'),('KPI dan risiko','kpi')]:
-        st.text_area(label,key=f'{selected}_{key}')
+    st.title('Tugas Diskusi Studi Kasus')
+    st.caption('10 kelompok • 1 kasus per kelompok • Case Method')
+    selected_idx=st.selectbox('Pilih kelompok/kasus',range(len(DISCUSSION_CASES)),format_func=lambda i: DISCUSSION_CASES[i]['title'])
+    item=DISCUSSION_CASES[selected_idx]
+    st.markdown(f"## {item['title']}")
+    st.markdown(f"**Topik:** {item['topic']}")
+    st.markdown('<div class="case">',unsafe_allow_html=True)
+    st.markdown('### Situasi Kasus')
+    st.write(item['case'])
+    st.markdown('</div>',unsafe_allow_html=True)
+    st.markdown('## Pertanyaan Diskusi')
+    for i,q in enumerate(item['questions'],1): st.markdown(f'**{i}.** {q}')
+    st.divider()
+    st.markdown('## Format Output Kelompok')
+    st.markdown("""
+**1. Identifikasi masalah bisnis** — Jelaskan masalah utama berdasarkan fakta kasus.
+
+**2. Analisis** — Gunakan konsep materi untuk menjelaskan penyebab dan kondisi kasus.
+
+**3. Alternatif solusi** — Susun minimal dua alternatif.
+
+**4. Evaluasi alternatif** — Bandingkan manfaat, biaya, risiko, kebutuhan data, teknologi, dan dampaknya terhadap pelanggan.
+
+**5. Rekomendasi** — Pilih satu alternatif dan berikan alasan yang logis.
+
+**6. KPI** — Tentukan indikator untuk mengukur keberhasilan rekomendasi.
+
+**7. Risiko dan mitigasi** — Identifikasi risiko utama dan cara menguranginya.
+""")
+    st.info('Setiap kelompok sebaiknya mempertahankan hubungan yang jelas antara masalah → data → konsep → alternatif → rekomendasi → KPI.')
 
 elif page=='Latihan':
     st.title('Latihan')
